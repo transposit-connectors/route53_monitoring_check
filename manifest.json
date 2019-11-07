@@ -51,6 +51,26 @@
         "tql": {
           "tql": "-- This SQL operation is useful to test the message you've\n-- constructed for your webhook. If you provide a Slack\n-- auth in \"Auth & user settings\", it will post a message\n-- to your Slackbot channel.\nSELECT * FROM slack.post_chat_message AS A\nJOIN this.get_slack_message AS B\nON A.$body.blocks = B.blocks\nAND A.$body.text = B.text\nWHERE A.$body.channel = (SELECT user_id from slack.test_auth)"
         }
+      }, {
+        "id": "list_distributions",
+        "tql": {
+          "tql": "SELECT * FROM aws_cloudfront.list_distributions\n"
+        }
+      }, {
+        "id": "list_teams",
+        "tql": {
+          "tql": "SELECT * FROM opsgenie.list_teams\n"
+        }
+      }, {
+        "id": "getMonitors",
+        "tql": {
+          "tql": "SELECT * FROM uptime_robot.getMonitors\n"
+        }
+      }, {
+        "id": "list_alerts",
+        "tql": {
+          "tql": "SELECT data.details[\"Monitor Url\"] as url FROM opsgenie.list_alerts as l\njoin opsgenie.get_alert as g\non g.identifier = l.id\n-- and l.id = '4227c09e-70d9-43f3-82d6-d1660cbeee29-1573096445634'\n -- get_alrt"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
