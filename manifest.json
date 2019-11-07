@@ -12,6 +12,9 @@
       }, {
         "name": "transposit/aws_cloudfront:v1.*.*",
         "alias": "aws_cloudfront"
+      }, {
+        "name": "transposit/opsgenie:v1.*.*",
+        "alias": "opsgenie"
       }],
       "operations": [{
         "id": "webhook",
