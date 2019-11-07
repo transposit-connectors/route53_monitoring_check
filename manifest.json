@@ -15,6 +15,9 @@
       }, {
         "name": "transposit/opsgenie:v1.*.*",
         "alias": "opsgenie"
+      }, {
+        "name": "mooredstransposit/uptime_robot:latest",
+        "alias": "uptime_robot"
       }],
       "operations": [{
         "id": "webhook",
