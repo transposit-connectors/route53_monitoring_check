@@ -10,9 +10,6 @@
         "name": "transposit/slack_webhook:v2.*.*",
         "alias": "slack_webhook"
       }, {
-        "name": "transposit/aws_cloudfront:v1.*.*",
-        "alias": "aws_cloudfront"
-      }, {
         "name": "mooredstransposit/uptime_robot:latest",
         "alias": "uptime_robot"
       }, {
