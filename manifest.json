@@ -7,9 +7,6 @@
         "title": "Slack",
         "description": "Authorize this connector if you want to use the Slack API."
       }, {
-        "name": "transposit/slack_webhook:v2.*.*",
-        "alias": "slack_webhook"
-      }, {
         "name": "mooredstransposit/uptime_robot:latest",
         "alias": "uptime_robot"
       }, {
