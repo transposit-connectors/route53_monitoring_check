@@ -65,14 +65,25 @@
           "tql": "SELECT * FROM opsgenie.list_teams\n"
         }
       }, {
-        "id": "getMonitors",
-        "tql": {
-          "tql": "SELECT * FROM uptime_robot.getMonitors\n"
-        }
-      }, {
         "id": "list_alerts",
         "tql": {
           "tql": "SELECT data.details[\"Monitor Url\"] as url FROM opsgenie.list_alerts as l\njoin opsgenie.get_alert as g\non g.identifier = l.id\n-- and l.id = '4227c09e-70d9-43f3-82d6-d1660cbeee29-1573096445634'\n -- get_alrt"
+        }
+      }, {
+        "id": "list_hosted_zones",
+        "tql": {
+          "tql": "SELECT Name FROM aws_route53.list_hosted_zones\n  -- WHERE delegationsetid='<string>'\n  -- LIMIT 10\n"
+        }
+      }, {
+        "id": "scheduled_job",
+        "function": {
+          "js": "scheduled_job.js",
+          "lang": "js"
+        }
+      }, {
+        "id": "get_monitors",
+        "tql": {
+          "tql": "SELECT monitors.monitor FROM uptime_robot.getMonitors\n"
         }
       }],
       "dataConnections": [{
