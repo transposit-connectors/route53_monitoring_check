@@ -16,12 +16,12 @@
       "operations": [{
         "id": "list_hosted_zones",
         "tql": {
-          "tql": "SELECT Name FROM aws_route53.list_hosted_zones\n"
+          "tql": "SELECT Name \nFROM aws_route53.list_hosted_zones\n"
         }
       }, {
         "id": "get_monitors",
         "tql": {
-          "tql": "SELECT monitors.monitor FROM uptime_robot.getMonitors\n"
+          "tql": "SELECT monitors.monitor \nFROM uptime_robot.getMonitors\n"
         }
       }, {
         "id": "unmonitored_hosts",
