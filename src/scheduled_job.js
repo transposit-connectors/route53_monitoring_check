@@ -1,5 +1,4 @@
 (params) => {
-
   const hostnames = api.run("this.list_hosted_zones").map(h => {
     return h.Name.replace(/\.$/,"");
   });
