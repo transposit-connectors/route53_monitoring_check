@@ -32,7 +32,7 @@
       }, {
         "id": "run_it",
         "function": {
-          "js": "untitled.js",
+          "js": "run_it.js",
           "lang": "js"
         }
       }, {
