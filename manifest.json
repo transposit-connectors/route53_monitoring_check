@@ -26,7 +26,7 @@
       }, {
         "id": "unmonitored_hosts",
         "function": {
-          "js": "scheduled_job.js",
+          "js": "unmonitored_hosts.js",
           "lang": "js"
         }
       }, {
