@@ -35,6 +35,17 @@
           "js": "untitled.js",
           "lang": "js"
         }
+      }, {
+        "id": "post_chat_message",
+        "tql": {
+          "parameters": [{
+            "name": "text",
+            "description": "text to publish",
+            "type": "STRING",
+            "required": true
+          }],
+          "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : 'monitoring',\n    'text' : @text,\n  })\n"
+        }
       }],
       "dataConnections": [{
         "ref": "slack_identify.raw",
