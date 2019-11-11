@@ -13,9 +13,6 @@
         "name": "transposit/aws_cloudfront:v1.*.*",
         "alias": "aws_cloudfront"
       }, {
-        "name": "transposit/opsgenie:v1.*.*",
-        "alias": "opsgenie"
-      }, {
         "name": "mooredstransposit/uptime_robot:latest",
         "alias": "uptime_robot"
       }, {
