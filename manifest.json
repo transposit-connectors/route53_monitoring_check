@@ -14,16 +14,6 @@
         "alias": "aws_route53"
       }],
       "operations": [{
-        "id": "list_distributions",
-        "tql": {
-          "tql": "SELECT * FROM aws_cloudfront.list_distributions\n"
-        }
-      }, {
-        "id": "list_teams",
-        "tql": {
-          "tql": "SELECT * FROM opsgenie.list_teams\n"
-        }
-      }, {
         "id": "list_hosted_zones",
         "tql": {
           "tql": "SELECT Name FROM aws_route53.list_hosted_zones\n  -- WHERE delegationsetid='<string>'\n  -- LIMIT 10\n"
