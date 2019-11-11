@@ -16,7 +16,7 @@
       "operations": [{
         "id": "list_hosted_zones",
         "tql": {
-          "tql": "SELECT Name FROM aws_route53.list_hosted_zones\n  -- WHERE delegationsetid='<string>'\n  -- LIMIT 10\n"
+          "tql": "SELECT Name FROM aws_route53.list_hosted_zones\n"
         }
       }, {
         "id": "get_monitors",
