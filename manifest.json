@@ -54,7 +54,7 @@
       }, {
         "id": "list_resource_record_sets",
         "tql": {
-          "tql": "SELECT * FROM aws_route53.list_resource_record_sets\n  WHERE Id='Z33R5J7MRTJXDT'\n  and Type = 'NS'\n  LIMIT 10\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT * FROM aws_route53.list_resource_record_sets\n  WHERE Id=''\n  and Type = 'NS'\n  LIMIT 10\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }],
       "dataConnections": [{
