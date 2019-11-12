@@ -43,8 +43,13 @@
             "description": "text to publish",
             "type": "STRING",
             "required": true
+          }, {
+            "name": "channel",
+            "description": "channel name to post warnings to",
+            "type": "STRING",
+            "required": true
           }],
-          "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : 'monitoring',\n    'text' : @text,\n  })\n"
+          "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : @channel,\n    'text' : @text,\n  })\n"
         }
       }, {
         "id": "list_resource_record_sets",
