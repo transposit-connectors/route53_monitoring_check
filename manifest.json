@@ -21,7 +21,7 @@
       }, {
         "id": "get_monitors",
         "tql": {
-          "tql": "SELECT monitors.monitor \nFROM uptime_robot.getMonitors\n"
+          "tql": "SELECT *\nFROM uptime_robot.getMonitors\n"
         }
       }, {
         "id": "unmonitored_hosts",
@@ -45,6 +45,11 @@
             "required": true
           }],
           "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : 'monitoring',\n    'text' : @text,\n  })\n"
+        }
+      }, {
+        "id": "list_resource_record_sets",
+        "tql": {
+          "tql": "SELECT * FROM aws_route53.list_resource_record_sets\n  WHERE Id='Z33R5J7MRTJXDT'\n  and Type = 'NS'\n  LIMIT 10\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
         }
       }],
       "dataConnections": [{
