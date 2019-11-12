@@ -95,7 +95,12 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettingsDisplay": "GENERATED"
+      "userSettingsDisplay": "GENERATED",
+      "appSettings": [{
+        "name": "monitoring_channel",
+        "description": "The slack channel to which you want warnings to be posted",
+        "type": "STRING"
+      }]
     }
   }
 }
