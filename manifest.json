@@ -43,13 +43,13 @@
             "description": "text to publish",
             "type": "STRING",
             "required": true
+          }, {
+            "name": "channel",
+            "description": "channel name to post warnings to",
+            "type": "STRING",
+            "required": true
           }],
-          "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : 'monitoring',\n    'text' : @text,\n  })\n"
-        }
-      }, {
-        "id": "list_resource_record_sets",
-        "tql": {
-          "tql": "SELECT * FROM aws_route53.list_resource_record_sets\n  WHERE Id='Z33R5J7MRTJXDT'\n  and Type = 'NS'\n  LIMIT 10\n\n/*\n * For sample code and reference material, visit\n * https://www.transposit.com/docs/get-started/sql-quickstart\n */"
+          "tql": "SELECT * FROM slack.post_chat_message\n  WHERE $body=(SELECT {\n    'channel' : @channel,\n    'text' : @text,\n  })\n"
         }
       }],
       "dataConnections": [{
@@ -90,7 +90,12 @@
       }],
       "javascriptAPIVersion": "3",
       "source": "src",
-      "userSettingsDisplay": "GENERATED"
+      "userSettingsDisplay": "GENERATED",
+      "appSettings": [{
+        "name": "monitoring_channel",
+        "description": "The slack channel to which you want warnings to be posted",
+        "type": "STRING"
+      }]
     }
   }
 }
