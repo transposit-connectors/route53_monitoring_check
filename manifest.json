@@ -21,7 +21,7 @@
       }, {
         "id": "get_monitors",
         "tql": {
-          "tql": "SELECT *\nFROM uptime_robot.getMonitors\n"
+          "tql": "SELECT monitors.monitor \nFROM uptime_robot.getMonitors\n"
         }
       }, {
         "id": "unmonitored_hosts",
