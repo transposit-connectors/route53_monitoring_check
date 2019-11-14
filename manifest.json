@@ -7,9 +7,6 @@
         "title": "Slack",
         "description": "Authorize this connector if you want to use the Slack API."
       }, {
-        "name": "mooredstransposit/uptime_robot:latest",
-        "alias": "uptime_robot"
-      }, {
         "name": "transposit/aws_route53:v1.*.*",
         "alias": "aws_route53"
       }],
