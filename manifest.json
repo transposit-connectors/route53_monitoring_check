@@ -96,6 +96,8 @@
         "description": "The slack channel to which you want warnings to be posted",
         "type": "STRING"
       }]
-    }
+    },
+    "description": "Checks to see that all Route53 hosted zones have a monitor in UptimeRobot",
+    "displayName": "Route53 Monitoring Check"
   }
 }
