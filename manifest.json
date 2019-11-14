@@ -9,6 +9,9 @@
       }, {
         "name": "transposit/aws_route53:v1.*.*",
         "alias": "aws_route53"
+      }, {
+        "name": "transposit/uptime_robot:v1.*.*",
+        "alias": "uptime_robot"
       }],
       "operations": [{
         "id": "list_hosted_zones",
