@@ -1,3 +1,5 @@
+# Route53 Monitoring Check
+
 This application will monitor route53 for new hosted zones (`example.com`).
 
 It will match up the hostname to monitors from UptimeRobot. Any hostnames that are in Route53 but not being monitored will cause a Slack message to be posted.
